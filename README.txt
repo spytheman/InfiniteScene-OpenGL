@@ -1,6 +1,6 @@
 Erik Paluka. Winter 2012.
 
-Travelling Through a Scene - An Interactive Movie
+Travelling Through a Scene - An Interactive Movie.
 
 Implemented in C++ using OpenGL.
 
