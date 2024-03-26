@@ -1,5 +1,6 @@
 #include "Paluka-Infinite_Scene.h"
 
+typedef unsigned char BYTE;
 
 
 // load a RGB .RAW file as a texture

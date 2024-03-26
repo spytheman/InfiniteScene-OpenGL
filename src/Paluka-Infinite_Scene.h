@@ -10,7 +10,6 @@
 //#ifndef paluka
 //#define paluka
 
-#include <Windows.h>
 //#include <Mmsystem.h>
 #include <GL/glut.h>
 #include <stdlib.h>
