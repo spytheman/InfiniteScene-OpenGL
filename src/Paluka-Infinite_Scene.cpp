@@ -150,7 +150,7 @@ void drawGround(vector<Point> *vertices, unsigned int texture, float u2, float v
 	glTexCoord2d(0, 0.01); 
 	glVertex3f(vertices->at(0).x, vertices->at(0).y, vertices->at(0).z);
 	glEnd();
-	glBindTexture(GL_TEXTURE_2D, NULL);
+	glBindTexture(GL_TEXTURE_2D, 0);
 	glPopAttrib();
 
 }
@@ -232,7 +232,7 @@ void drawSnow(int i){
 	glVertex3f(flakes[i].sizeX, 0.1, flakes[i].sizeZ);
 
 	glEnd();
-	glBindTexture(GL_TEXTURE_2D, NULL); 
+	glBindTexture(GL_TEXTURE_2D, 0);
 
 	flakes[i].y += flakes[i].vY;
 	flakes[i].z += flakes[i].vZ;
@@ -294,7 +294,7 @@ void drawBackground(unsigned int texture, int width, int height){
 	glVertex3f(width/10, y3, z3);
 	glEnd();
 
-	glBindTexture(GL_TEXTURE_2D, NULL);
+	glBindTexture(GL_TEXTURE_2D, 0);
 
 }
 
@@ -386,7 +386,7 @@ void createGround(float startX, float endX, string side){
 		} else {
 
 			if (side.compare("right") == 0){
-				Point p3 = {-WIDTH_PATH-curve-0.001, RADIUSG*cos(t), RADIUSG*sin(t)};
+				Point p3 = {-WIDTH_PATH-curve-0.001f, RADIUSG*cos(t), RADIUSG*sin(t)};
 				rightCurbV->push_back(p3);
 				Point p4 = {-WIDTH_PATH-curve, RADIUS*cos(t), RADIUS*sin(t)};
 				rightCurbV->push_back(p4);
@@ -394,7 +394,7 @@ void createGround(float startX, float endX, string side){
 			} else if (side.compare("left") == 0){
 				Point p3 = {WIDTH_PATH-curve, RADIUS*cos(t), RADIUS*sin(t)};
 				leftCurbV->push_back(p3);
-				Point p4 = {WIDTH_PATH-curve+0.001, RADIUSG*cos(t), RADIUSG*sin(t)};
+				Point p4 = {WIDTH_PATH-curve+0.001f, RADIUSG*cos(t), RADIUSG*sin(t)};
 				leftCurbV->push_back(p4);
 
 			}
@@ -551,7 +551,7 @@ void createTexTrees(int j){
 		glVertex3f(trees[j].x-10, y2, z2);
 
 		glEnd();
-		glBindTexture(GL_TEXTURE_2D, NULL);
+		glBindTexture(GL_TEXTURE_2D, 0);
 		glDisable(GL_BLEND);
 		glDepthMask(true);
 			
